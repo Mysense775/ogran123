@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алмазный Огранщик</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Заголовок -->
+        <header class="header">
+            <h1>💎 Алмазный Огранщик</h1>
+            <p>Превращаем хаос в алмазы</p>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="dashboard">Главная</button>
+            <button class="tab-btn" data-tab="journal">Дневник</button>
+            <button class="tab-btn" data-tab="chapters">Главы</button>
+            <button class="tab-btn" data-tab="meditation">Медитации</button>
+            <button class="tab-btn" data-tab="map">Карта роста</button>
+        </nav>
+
+        <!-- Контент -->
+        <main class="content">
+            <!-- Дашборд -->
+            <section id="dashboard" class="tab-content active">
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>Дней подряд</h3>
+                        <span class="stat-number">7</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Семян посеяно</h3>
+                        <span class="stat-number">12</span>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Уроков пройдено</h3>
+                        <span class="stat-number">3</span>
+                    </div>
+                </div>
+
+                <div class="daily-task">
+                    <h3>Задание на сегодня</h3>
+                    <div class="task-card">
+                        <p>Помоги коллеге с проектом без ожидания благодарности</p>
+                        <button class="btn-complete">Выполнено ✓</button>
+                    </div>
+                </div>
+
+                <div class="recent-journals">
+                    <h3>Последние записи</h3>
+                    <div class="journal-preview">
+                        <p><strong>Сегодня:</strong> Обсудил с командой новые идеи...</p>
+                        <p><strong>Вчера:</strong> Помог другу с резюме...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Дневник -->
+            <section id="journal" class="tab-content">
+                <h2>Дневник Огранщика</h2>
+                <form id="journal-form">
+                    <div class="form-group">
+                        <label>Какое главное событие-вызов было сегодня?</label>
+                        <textarea id="event" rows="3" placeholder="Опишите событие..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Как вы отреагировали?</label>
+                        <div class="reaction-buttons">
+                            <button type="button" class="reaction-btn" data-value="1">Хрупко 😔</button>
+                            <button type="button" class="reaction-btn" data-value="2">Прочно 😐</button>
+                            <button type="button" class="reaction-btn" data-value="3">Антихрупко 💪</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Какой кармический урок в этом может быть?</label>
+                        <textarea id="lesson" rows="2" placeholder="Что это может отражать?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Какое семя помощи вы сегодня посеяли?</label>
+                        <textarea id="seed" rows="2" placeholder="Опишите ваше действие..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Какое семя планируете посеять завтра?</label>
+                        <textarea id="tomorrow" rows="2" placeholder="Ваши планы..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Сохранить дневник</button>
+                </form>
+
+                <div class="journal-history">
+                    <h3>История записей</h3>
+                    <div id="journal-entries"></div>
+                </div>
+            </section>
+
+            <!-- Главы -->
+            <section id="chapters" class="tab-content">
+                <h2>Работа по главам</h2>
+                <div class="chapters-list">
+                    <!-- Главы будут добавлены через JavaScript -->
+                </div>
+            </section>
+
+            <!-- Медитации -->
+            <section id="meditation" class="tab-content">
+                <h2>Медитации и практики</h2>
+                <div class="meditations-list">
+                    <!-- Медитации будут добавлены через JavaScript -->
+                </div>
+            </section>
+
+            <!-- Карта роста -->
+            <section id="map" class="tab-content">
+                <h2>Карта Хаоса и Алмазов</h2>
+                <div class="map-container">
+                    <div class="map-sectors">
+                        <!-- Секторы будут добавлены через JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
